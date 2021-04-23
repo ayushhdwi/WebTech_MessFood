@@ -154,7 +154,7 @@ body {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
 #menu-tile {
-  background: url("https://lh3.googleusercontent.com/LXR8CGCbxkQZoQEDbk1uXECA3Rp_OkOCZ7lvAEjYu-D5-V65W3aGBSCJ6Jz-P-QpAe8j6InVYeqHghNhiBcC6yCu7t5mylVybbX7NgsZerW-5g5bohBs1HvMt1BnOIzZMPu1LjW3Du7eKVINfqq0GZ_SiyqC-wJ1jtivflszVioFNqFhgYRQpfoJILc44-213kXkvRI0XS8KrRAPtNQi8yq1AdMLRBkirf0X3k1kNkrAQ_nNA1g2n02gsfGCVc29QSAvSpl9Cggrb9nnTahvr9LhdM2m8Z-uOQlVF_ORF1WSbwQq_pbxyZvHN3eBvpoXF5alaU95bZCo6jEA-IV-c2g2RfDgLRWMoDeBufpeynoWtLv0kSOT4WlrHKfiEVMHXEKFGIQPcs1AdS2f7ZaxCD1JX8vIThD_f7wfyXjLgS0ROXJXl2iQ7T4ES3ngWW4hHnz06n-7lF_ow7JxjESB24zMvN9kkhROpOxeyiyZYgNRoRroM9hbjB7Pi0qBVJGEd8J1llTaUkHAP9md74FCBSzRfscvpPiHF8r9EybXSz-T5wL1R02RHqGniaGVta3_BDDn1SHo4wLdQg-paNrrNiiwb6mLiZOPW0E9v1uKwwfcwxqRsIlam_Myj8WC-agQhnoDETQh2D8hUrW4m7D_HtUZepQ8kwM_fPPSAKVq4U_MAW9Ee2gTkrliOpKN6w=w1268-h952-no?authuser=0")
+  background: url("https://cdn2.geckoandfly.com/wp-content/uploads/2019/06/menu-template-restaurant-cafe-templates-32.jpg")
     no-repeat;
   background-position: center;
   background-size: cover;
@@ -184,12 +184,34 @@ body {
 }
 /* END HOME PAGE */
 
+
+/* VEG PAGE */
+
+.storeFood {
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  margin: 15px;
+}
+
+.storeFood:hover {
+  background-color: #ffe9b8;
+  
+}
+
 /* MENU CATEGORIES PAGE */
+.food-menu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 .category-tile {
   position: relative;
   border: 2px solid #3f0c1f;
   overflow: hidden;
-  width: 550px;
+  width: 90%;
   height: 300px;
   margin: 0 auto 15px;
 }
@@ -250,6 +272,7 @@ body {
 }
 .menu-item-description {
   padding-right: 30px;
+  /* text-align: center; */
 }
 h3.menu-item-title {
   margin: 0 0 10px;

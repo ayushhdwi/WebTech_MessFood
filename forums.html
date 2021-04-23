@@ -52,6 +52,10 @@
 								<span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
 						</li>
 						<li>
+							<a href="popular.html">
+								<span class="glyphicon glyphicon-star"></span><br class="hidden-xs"> Popular</a>
+						</li>
+						<li>
 							<a href="about.html">
 								<span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
 						</li>
@@ -81,40 +85,31 @@
 	<div id="main-content" class="container">
 	
 
-
-
-
-
 		<div class="search-row">
 
 			<span class="body-top col-md-6 col-sm-12 col-xs-12">
-				<h3>Total Commentors (0)</h3>
+				<h3 id="total_commentors">Total Commentors (0)</h3>
 			</span>
 
 			<span class="body-top col-md-6 col-sm-12 col-xs-12" id="search-box">
 				<input type="text" class="search-bar" name="search" id="search">
-				<button type="button" class="search-btn">Search</button>
+				<button type="button" class="search-btn searchComment">Search</button>
 			</span>
 
 		</div>
 		
 		<div class="col-md-12 col-sm-12 col-xs-12 comment">
-			<div id="username">
-				<b>Username</b>
-			</div>
-			<div id="user_comment">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ex cupiditate eveniet itaque? Distinctio eius ratione temporibus labore et iusto vel praesentium! Dolor aliquam, iusto iste dolore maxime temporibus deleniti!
-			</div>
+
 		</div>
 		<hr><br><br>
 
-		<h3 style="margin-top: 100px;" class="new-comment">Add Your Comment</h3>
+		<h3 class="new-comment">Add Your Comment</h3>
 
 		<div id="comment-box" class="input-group">
-			<input type="text" name="name" id="name" placeholder="Your Name"><br>
-			<input type="text" name="name" id="name" placeholder="Food"><br>
-			<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Add Your Comment here"></textarea><br>	
-			<button type="submit" class="submit-btn" value="submit">Post Comment</button>
+			<input type="text" id="name" class="name" placeholder="Your Name"><br>
+			<input type="text" id="name" class="foodname" placeholder="Food"><br>
+			<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Add Your Comment here"></textarea><br>
+			<button type="submit" class="submit-btn addComment" value="submit">Post Comment</button>
 		</div>
 
 	</div><!-- End of #main-content -->
@@ -149,7 +144,9 @@
 	<!-- jQuery (Bootstrap JS plugins depend on it) -->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	
 	<script src="js/script.js"></script>
+	<script src="js/forums.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ body {
   font-size: 16px;
   color: #fff;
   background-color: #ec757f;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 /** HEADER **/
@@ -27,6 +27,7 @@ body {
 
 .navbar-brand {
   padding-top: 25px;
+
 }
 .navbar-brand h1 {
   /* Restaurant name */
@@ -40,6 +41,12 @@ body {
   margin-bottom: 0;
   line-height: 0.75;
 }
+
+/* .navbar-brand a h1 {
+  letter-spacing: 5px;
+
+} */
+
 .navbar-brand a:hover,
 .navbar-brand a:focus {
   text-decoration: none;
@@ -133,14 +140,24 @@ body {
 /* END FOOTER */
 
 /* MENU CATEGORIES PAGE */
+
+
 .category-tile {
   position: relative;
   border: 2px solid #3f0c1f;
   overflow: hidden;
-  width: 350px;
+  width: 25rem;
   height: 300px;
   margin: 0 auto 15px;
 }
+
+.your-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 .category-tile span {
   position: absolute;
   bottom: 0;

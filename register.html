@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="css/register.css">
 	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -26,8 +29,7 @@
 							<h1>VIT VELLORE MESS</h1>
 						</a>
 						<p>
-							<img class="star-icon" src="https://image.flaticon.com/icons/png/512/61/61474.png" alt=Loved
-								By Students">
+							<img class="star-icon" src="https://image.flaticon.com/icons/png/512/61/61474.png" alt="Loved By Students">
 							<span>Loved By Students</span>
 						</p>
 					</div>
@@ -50,6 +52,10 @@
 						<li>
 							<a href="menu-categories.html">
 								<span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+						</li>
+						<li>
+							<a href="popular.html">
+								<span class="glyphicon glyphicon-star"></span><br class="hidden-xs"> Popular</a>
 						</li>
 						<li>
 							<a href="about.html">
@@ -79,21 +85,23 @@
 	<div id="xs-deliver" class="text-center visible-xs">Call Us</div>
 
 	<div id="main-content" class="container">
-		<h2 id="menu-categories-title" class="text-center">Register For Mess</h2>
+		<h2 id="menu-categories-title" class="text-center">Register For Mess</h2><br>
 		<section class="row">
 			<center>
 				<div class="form">
-					<form action="">
+					<div>
 						<label for="id">Registration Number</label><br>
-						<input type="number" id="id" name="id" style="color: black;"><br><br>
+						<input type="text" id="reg" placeholder="Enter Your Registeration Number" style="color: black;"><br><br>
+
 						<label for="name">Name</label><br>
-						<input type="text" id="name" name="name" style="color: black;"><br><br>
+						<input type="text" id="name" placeholder="Enter Your Name" style="color: black;"><br><br>
+
 						<label for="block">Hostel Block</label><br>
-						<input type="text" id="block" name="block" style="color: black;"><br><br>
-						<input type="submit" name="submit" value="Proceed To Payment" onclick="storeData()" style="color: black;"><br><br>
-					</form>
+						<input type="text" id="block" placeholder="Enter Your Hostel Block" style="color: black;"><br><br>
+
+						<input type="submit" name="submit" value="Proceed To Payment" id="rzp-button1"><br><br>
+					</div>
 				</div>
-				<div id="paypal-button"></div>
 			</center>
 		</section>
 	</div><!-- End of #main-content -->
@@ -124,48 +132,15 @@
 			<div class="text-center">&copy; Copyright VIT Mess</div>
 		</div>
 	</footer>
-	
+
 	<script src="https://www.paypalobjects.com/api/checkout.js"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="./js/register.js"></script>
+
 </body>
-<script>
-	paypal.Button.render({
-		// Configure environment
-		env: 'sandbox',
-		client: {
-			sandbox: 'demo_sandbox_client_id',
-			production: 'demo_production_client_id'
-		},
-		// Customize button (optional)
-		locale: 'en_US',
-		style: {
-			size: 'small',
-			color: 'gold',
-			shape: 'pill',
-		},
-		// Set up a payment
-		payment: function (data, actions) {
-			return actions.payment.create({
-				transactions: [{
-					amount: {
-						total: '0.01',
-						currency: 'USD'
-					}
-				}]
-			});
-		},
-		// Execute the payment
-		onAuthorize: function (data, actions) {
-			return actions.payment.execute()
-				.then(function () {
-					// Show a confirmation message to the buyer
-					window.alert('Thank you for your purchase!');
-				});
-		}
-	}, '#paypal-button');
-</script>
+
 </html>
 <!-- 
 things to add
